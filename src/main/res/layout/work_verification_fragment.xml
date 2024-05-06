@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/container_body_padding"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/form_title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginBottom="@dimen/text_view_vertical_margin"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/stage_title" />
+
+
+        <TextView
+            android:id="@+id/allow_intership_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/text_view_vertical_margin"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/label_text_view" />
+
+            <LinearLayout
+                android:id="@+id/job_details_card_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <CheckBox
+                android:id="@+id/field_no_experience_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:minWidth="32dp"
+                android:minHeight="32dp"
+                android:layout_marginStart="-5dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/label_text_view" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <LinearLayout
+                    android:id="@+id/add_record_submit_button_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:baselineAligned="false">
+
+                    <RelativeLayout
+                        android:id="@+id/add_record_relative_layout"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/submit_button_height"
+                        android:background="@drawable/progress_button_round_corner"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:id="@+id/add_record_button_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/submit_button_text_view" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/work_verification_submit_relative_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/submit_button_height"
+                        android:layout_marginStart="15dp"
+                        android:background="@drawable/progress_button_round_corner"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:minWidth="48dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/submit_button_padding_start"
+                        android:paddingEnd="@dimen/submit_button_padding_end">
+
+                        <ProgressBar
+                            android:id="@+id/work_verification_submit_progress_bar"
+                            android:layout_width="@dimen/submit_button_progress_bar_size"
+                            android:layout_height="@dimen/submit_button_progress_bar_size"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="@dimen/submit_button_progress_bar_margin_end"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/work_verification_submit_button_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/submit_button_text_view" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/submit_add_record_button_relative_layout"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/submit_button_height"
+                    android:background="@drawable/progress_button_round_corner"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:minWidth="48dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/submit_button_padding_start"
+                    android:paddingEnd="@dimen/submit_button_padding_end">
+
+                    <ProgressBar
+                        android:id="@+id/add_record_submit_submit_button_progress_bar"
+                        android:layout_width="@dimen/submit_button_progress_bar_size"
+                        android:layout_height="@dimen/submit_button_progress_bar_size"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="@dimen/submit_button_progress_bar_margin_end"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/add_record_submit_button_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/submit_button_text_view" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

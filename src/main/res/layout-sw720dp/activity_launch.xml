@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_top"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/header_relative_layout"
+                    layout="@layout/header_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/header_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/stage_title_linear_layout"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/header_relative_layout"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:background="#e4e7ea"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/stage_title_text_view"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_margin="8dp"-->
+<!--                            android:gravity="center_horizontal"-->
+<!--                            android:textColor="@android:color/black"-->
+<!--                            android:textSize="@dimen/stage_title" />-->
+
+<!--                </LinearLayout>-->
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/relative_layout_top"
+            android:orientation="vertical"
+            android:background="@color/background"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/body_view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="100"
+                    android:paddingBottom="20dp"/>
+
+                <include
+                    android:id="@+id/footer_linear_layout_include"
+                    layout="@layout/footer_layout"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp" />
+
+        </LinearLayout>
+
+</RelativeLayout>
+
+

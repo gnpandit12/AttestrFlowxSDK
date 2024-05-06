@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/reference_visibility_toggle_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/reference_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/label_text_view" />
+
+        <ImageView
+            android:id="@+id/reference_visibility_toggle_image_view"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/reference_view_body_linear_layout"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/field_reference_name_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_view_vertical_margin"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/label_text_view" />
+
+            <EditText
+                android:id="@+id/field_reference_name_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/placeholder_height"
+                android:layout_marginBottom="@dimen/text_view_vertical_margin"
+                android:background="@drawable/edit_text_background"
+                android:fontFamily="@font/poppins"
+                android:imeOptions="actionSend"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:maxLength="256"
+                android:minHeight="48dp"
+                android:paddingStart="@dimen/placeholder_padding_start"
+                android:paddingEnd="@dimen/placeholder_padding_end"
+                android:textColorHint="@color/edit_text_hint"
+                android:textSize="@dimen/placeholder_edit_text"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/field_reference_name_data_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/data_error"
+                android:textSize="@dimen/data_error_text_view"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/field_reference_position_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_view_vertical_margin"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/label_text_view" />
+
+            <EditText
+                android:id="@+id/field_reference_position_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/placeholder_height"
+                android:layout_marginBottom="@dimen/text_view_vertical_margin"
+                android:background="@drawable/edit_text_background"
+                android:fontFamily="@font/poppins"
+                android:imeOptions="actionSend"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLength="256"
+                android:minHeight="48dp"
+                android:paddingStart="@dimen/placeholder_padding_start"
+                android:paddingEnd="@dimen/placeholder_padding_end"
+                android:textColorHint="@color/edit_text_hint"
+                android:textSize="@dimen/placeholder_edit_text"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/field_reference_position_data_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/data_error"
+                android:textSize="@dimen/data_error_text_view"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/field_reference_email_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_view_vertical_margin"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/label_text_view" />
+
+            <EditText
+                android:id="@+id/field_reference_email_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/placeholder_height"
+                android:layout_marginBottom="@dimen/text_view_vertical_margin"
+                android:background="@drawable/edit_text_background"
+                android:fontFamily="@font/poppins"
+                android:imeOptions="actionSend"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:maxLength="256"
+                android:minHeight="48dp"
+                android:paddingStart="@dimen/placeholder_padding_start"
+                android:paddingEnd="@dimen/placeholder_padding_end"
+                android:textColorHint="@color/edit_text_hint"
+                android:textSize="@dimen/placeholder_edit_text"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/field_reference_email_data_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/data_error"
+                android:textSize="@dimen/data_error_text_view"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/field_reference_contact_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_view_vertical_margin"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/label_text_view" />
+
+            <EditText
+                android:id="@+id/field_reference_contact_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/placeholder_height"
+                android:layout_marginBottom="@dimen/text_view_vertical_margin"
+                android:background="@drawable/edit_text_background"
+                android:fontFamily="@font/poppins"
+                android:imeOptions="actionSend"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:maxLength="256"
+                android:minHeight="48dp"
+                android:paddingStart="@dimen/placeholder_padding_start"
+                android:paddingEnd="@dimen/placeholder_padding_end"
+                android:textColorHint="@color/edit_text_hint"
+                android:textSize="@dimen/placeholder_edit_text"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/field_reference_contact_data_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/data_error"
+                android:textSize="@dimen/data_error_text_view"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

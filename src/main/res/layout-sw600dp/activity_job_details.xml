@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/job_details_coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/job_details_title_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#024ef3"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/job_details_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/label_text_view" />
+
+            <ImageView
+                android:id="@+id/exit_job_details_image_view"
+                android:layout_width="@dimen/header_skip_image"
+                android:layout_height="@dimen/header_skip_image"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="end"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_round_clear_24" />
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/job_details_nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/job_details_background_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/container_body_padding">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/card_corner_radius"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/card_view_linear_layout_padding">
+
+                        <LinearLayout
+                            android:id="@+id/field_employer_linear_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/field_employer_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/label_text_view" />
+
+                            <EditText
+                                android:id="@+id/field_employer_placeholder"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/placeholder_height"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/edit_text_background"
+                                android:imeOptions="actionNext"
+                                android:importantForAutofill="no"
+                                android:inputType="text"
+                                android:maxLength="256"
+                                android:minHeight="48dp"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="0dp"
+                                android:textSize="@dimen/placeholder_edit_text"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:id="@+id/field_employer_data_error"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/holo_red_light"
+                                android:textSize="@dimen/data_error_text_view"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/field_employer_id_linear_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/field_work_reg_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/label_text_view" />
+
+                            <EditText
+                                android:id="@+id/field_work_reg_placeholder"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/placeholder_height"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/edit_text_background"
+                                android:imeOptions="actionSend"
+                                android:importantForAutofill="no"
+                                android:inputType="text"
+                                android:maxLength="200"
+                                android:minHeight="48dp"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="0dp"
+                                android:textSize="@dimen/placeholder_edit_text"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:id="@+id/field_work_reg_date_error"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/holo_red_light"
+                                android:textSize="@dimen/data_error_text_view"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/field_position_linear_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/field_position_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/label_text_view" />
+
+                            <EditText
+                                android:id="@+id/field_position_placeholder"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/placeholder_height"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/edit_text_background"
+                                android:imeOptions="actionDone"
+                                android:importantForAutofill="no"
+                                android:inputType="text"
+                                android:maxLength="256"
+                                android:minHeight="48dp"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="0dp"
+                                android:textSize="@dimen/placeholder_edit_text"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:id="@+id/field_position_data_error"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/holo_red_light"
+                                android:textSize="@dimen/data_error_text_view"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/field_start_date_linear_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/field_start_date_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/label_text_view" />
+
+                            <EditText
+                                android:id="@+id/field_start_date_placeholder"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/placeholder_height"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/edit_text_background"
+                                android:focusable="false"
+                                android:imeOptions="actionDone"
+                                android:importantForAutofill="no"
+                                android:inputType="number"
+                                android:minHeight="48dp"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="0dp"
+                                android:singleLine="true"
+                                android:textSize="@dimen/placeholder_edit_text"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:id="@+id/field_start_date_data_error"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/holo_red_light"
+                                android:textSize="@dimen/data_error_text_view"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+
+                        <CheckBox
+                            android:id="@+id/field_progress_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="-5dp"
+                            android:layout_marginBottom="15dp"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/label_text_view" />
+
+                        <LinearLayout
+                            android:id="@+id/job_details_end_data_linear_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/field_end_date_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/label_text_view" />
+
+                            <EditText
+                                android:id="@+id/field_end_date_placeholder"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/placeholder_height"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/edit_text_background"
+                                android:focusable="false"
+                                android:imeOptions="actionDone"
+                                android:importantForAutofill="no"
+                                android:inputType="number"
+                                android:minHeight="48dp"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="0dp"
+                                android:singleLine="true"
+                                android:textSize="@dimen/placeholder_edit_text"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:id="@+id/field_end_date_data_error"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/holo_red_light"
+                                android:textSize="@dimen/data_error_text_view"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/references_label_linear_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/field_references_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/label_text_view" />
+
+                            <View
+                                android:id="@+id/references_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#E7E7E7" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/references_linear_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="vertical" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/text_view_vertical_margin"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="@dimen/text_view_vertical_margin"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/education_verifcation_document_image_view"
+                                    android:layout_width="@dimen/icon_size"
+                                    android:layout_height="@dimen/icon_size"
+                                    android:layout_gravity="center" />
+
+                                <TextView
+                                    android:id="@+id/education_verifcation_field_document_label"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/label_text_view"  />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/education_verifcation_recycler_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/work_verification_upload_document_data_error"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="@dimen/data_error_text_view" />
+
+                        <LinearLayout
+                            android:id="@+id/job_details_submit_relative_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/submit_button_linear_layout_margin_top"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/progress_button_round_corner"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:minWidth="48dp"
+                            android:orientation="horizontal"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp">
+
+                            <ProgressBar
+                                android:id="@+id/job_details_submit_progress_bar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/job_details_submit_button_text_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:lineHeight="16sp"
+                                android:textAllCaps="false"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/submit_button_text_view" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/job_details_bottom_sheet_linear_layout"
+        layout="@layout/bottom_sheet_layout"
+        android:visibility="gone" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

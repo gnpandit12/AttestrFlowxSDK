@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">AttestrApp</string>
+    <string name="attestr_flowx">Attestr FlowX</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_map_production_api_key">AIzaSyAQHQxREfIO6_Yb1eX75v_GpQsfnOD1tgA</string>
+    <string name="locale_english">English</string>
+    <string name="locale_native_hindi">हिंदी</string>
+    <string name="locale_native_marathi">मराठी</string>
+    <string name="locale_native_panjabi">ਪੰਜਾਬੀ</string>
+    <string name="locale_native_bangali">বাংলা</string>
+    <string name="locale_native_telugu">తెలుగు</string>
+    <string name="locale_native_tamil">தமிழ்</string>
+    <string name="locale_native_kannada">ಕನ್ನಡ</string>
+    <string name="locale_native_malayalam">മലയാളം</string>
+    <string name="locale_native_oria">ଓଡ଼ିଆ</string>
+    <string name="locale_native_gujarathi">ગુજરાતી</string>
+    <string name="locale_native_assamese">অসমীয়া</string>
+
+    <string name="locale_hindi">Hindi</string>
+    <string name="locale_marathi">Marathi</string>
+    <string name="locale_panjabi">Panjabi</string>
+    <string name="locale_bangali">Bangal</string>
+    <string name="locale_telugu">Telugu</string>
+    <string name="locale_tamil">Tamil</string>
+    <string name="locale_kannada">Kannada</string>
+    <string name="locale_malayalam">Malayalam</string>
+    <string name="locale_oria">Oria</string>
+    <string name="locale_gujarathi">Gujarati</string>
+    <string name="locale_assamese">Assamese</string>
+    <string name="test_string">Accept and Continue</string>
+</resources>

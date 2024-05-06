@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#F6F6F6</color>
+    <color name="edit_text_hint">#787878</color>
+    <color name="data_error">#A94442</color>
+    <color name="verification_success_text">#009933</color>
+    <color name="stage_description">#6A6A6A</color>
+    <color name="verification_success_description">#6A6A6A</color>
+    <color name="header">#EBEBEB</color>
+    <color name="dotted_gray_boarder">#DEDEDE</color>
+    <color name="dotted_red_boarder">#A94442</color>
+
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/digi_doc_nested_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp"
+        android:paddingStart="60dp"
+        android:paddingEnd="60dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_issure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="20dp"
+            android:textSize="@dimen/stage_info_text_view" />
+
+        <TextView
+            android:id="@+id/title_certificate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/stage_info_text_view" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#E7E7E7"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/digi_doc_data_error_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="@dimen/data_error_text_view"
+            android:layout_marginBottom="20dp"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:id="@+id/params_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/digi_doc_submit_Relative_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/submit_button_height"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="@dimen/submit_button_linear_layout_margin_top"
+            android:background="@drawable/progress_button_round_corner"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:minWidth="48dp"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <ProgressBar
+                android:id="@+id/digi_doc_submit_progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/digi_doc_submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/submit_button_text_view" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Elevation when button is pressed -->
+    <dimen name="button_elevation_material">2dp</dimen>
+    <!-- Z translation to apply when button is pressed -->
+    <dimen name="button_pressed_z_material">4dp</dimen>
+
+    <!--    Header dimensions-->
+    <dimen name="header_size">56dp</dimen>
+    <dimen name="header_logo_image_height">40dp</dimen>
+    <dimen name="header_logo_margin_start">15dp</dimen>
+    <dimen name="header_title">16sp</dimen>
+    <dimen name="header_subtitle">20sp</dimen>
+    <dimen name="header_skip_image">22dp</dimen>
+    <dimen name="header_skip_button_margin_end">22dp</dimen>
+    <!--    Footer dimensions-->
+    <dimen name="footer_lock_image">20dp</dimen>
+    <dimen name="footer_text">14sp</dimen>
+    <!--   Stage title dimension-->
+    <dimen name="stage_title">16sp</dimen>
+    <dimen name="stage_title_padding_start">15dp</dimen>
+    <dimen name="stage_title_padding_end">15dp</dimen>
+    <!--    Container body dimension -->
+    <dimen name="container_body_padding">10dp</dimen>
+    <dimen name="consent_container_body_padding">15dp</dimen>
+    <!--    Wait layout dimensions-->
+    <dimen name="wait_title">16sp</dimen>
+    <dimen name="wait_subtitle">14sp</dimen>
+    <!--    Common dimensions-->
+    <dimen name="stage_description_text_view">14sp</dimen>
+    <dimen name="label_text_view">14sp</dimen>
+    <dimen name="digital_address_check_card_text_view">12sp</dimen>
+    <dimen name="placeholder_edit_text">12sp</dimen>
+    <dimen name="data_error_text_view">12sp</dimen>
+    <dimen name="retry_attemps_text_view">12sp</dimen>
+    <dimen name="submit_button_text_view">14sp</dimen>
+    <dimen name="submit_button_height">48dp</dimen>
+    <dimen name="otp_retry_label">16sp</dimen>
+    <dimen name="otp_retry">16sp</dimen>
+    <dimen name="captcha_image_view_width">155dp</dimen>
+    <dimen name="captcha_image_view_height">55dp</dimen>
+    <dimen name="captcha_reload_image_view_size">30dp</dimen>
+    <!--    Stage Info dimensions-->
+    <dimen name="stage_info_text_view">14sp</dimen>
+    <!--    Verification success dimensions-->
+    <dimen name="verification_success_image_view">90dp</dimen>
+    <dimen name="verification_successful_text_view">16sp</dimen>
+    <dimen name="verification_success_description_text_view">14sp</dimen>
+    <!--    Face Match QR code size-->
+    <dimen name="face_match_qr_code_size">200dp</dimen>
+    <dimen name="bottom_sheet_icon_size">40dp</dimen>
+    <dimen name="bottom_sheet_icon_label">14sp</dimen>
+
+    <dimen name="icon_size">20dp</dimen>
+    <dimen name="card_corner_radius">10dp</dimen>
+    <dimen name="card_elevation">5dp</dimen>
+    <dimen name="card_view_linear_layout_padding">10dp</dimen>
+
+    <!--    Proceed button dimensions-->
+    <dimen name="submit_button_progress_bar_size">20dp</dimen>
+    <dimen name="submit_button_progress_bar_margin_end">15dp</dimen>
+    <dimen name="submit_button_padding_start">35dp</dimen>
+    <dimen name="submit_button_padding_end">35dp</dimen>
+    <dimen name="submit_button_linear_layout_margin_top">30dp</dimen>
+
+    <!--    Proceed button dimensions-->
+    <dimen name="text_view_vertical_margin">10dp</dimen>
+
+    <!--    Placeholder dimensions -->
+    <dimen name="placeholder_padding_start">10dp</dimen>
+    <dimen name="placeholder_padding_end">10dp</dimen>
+    <dimen name="placeholder_height">48dp</dimen>
+    <dimen name="address_placeholder_height">96dp</dimen>
+
+    <!--    IPV details dimensions -->
+    <dimen name="ipv_video_details_text_view">12sp</dimen>
+
+
+</resources>

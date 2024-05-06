@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:padding="@dimen/container_body_padding">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation"
+            android:layout_marginTop="50dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="25dp"
+                app:layout_constraintEnd_toStartOf="@+id/face_match_data_error"
+                app:layout_constraintStart_toStartOf="@+id/face_match_data_error">
+
+                <TextView
+                    android:id="@+id/face_match_data_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginBottom="@dimen/text_view_vertical_margin"
+                    android:textColor="@color/data_error"
+                    android:textSize="@dimen/data_error_text_view"
+                    app:layout_constraintBottom_toTopOf="@+id/error_qr_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/error_qr_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/label_text_view"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginBottom="@dimen/text_view_vertical_margin"
+                    app:layout_constraintBottom_toTopOf="@+id/error_qr_warning"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/face_match_data_error" />
+
+                <TextView
+                    android:id="@+id/error_qr_warning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/placeholder_edit_text"
+                    android:fontFamily="@font/poppins_medium"
+                    app:layout_constraintBottom_toTopOf="@+id/face_match_qr_image_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/error_qr_text" />
+
+                <ImageView
+                    android:id="@+id/face_match_qr_image_view"
+                    android:layout_width="@dimen/face_match_qr_code_size"
+                    android:layout_marginTop="30dp"
+                    android:layout_height="@dimen/face_match_qr_code_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/error_qr_warning" />
+
+                <LinearLayout
+                    android:id="@+id/qr_horizontal_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/face_match_qr_image_view">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#DEDEDE"
+                        android:layout_weight="1.01" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="OR"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="@dimen/label_text_view"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="#DEDEDE"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_weight="1.01"
+                        android:background="#DEDEDE" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/share_qr_link_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/submit_button_height"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/submit_button_linear_layout_margin_top"
+                    android:background="@drawable/progress_button_round_corner"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:minWidth="48dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/submit_button_padding_start"
+                    android:paddingEnd="@dimen/submit_button_padding_end"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/qr_horizontal_view">
+
+
+                    <TextView
+                        android:id="@+id/share_qr_link_button_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/submit_button_text_view" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/redirect_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="@dimen/label_text_view"
+                    android:fontFamily="@font/poppins"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/share_qr_link_button"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:gravity="center"
+    app:behavior_hideable="true"
+    android:orientation="vertical"
+    android:background="@drawable/round_corner_background"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <TextView
+        android:id="@+id/file_picker_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/bottom_sheet_icon_label" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/open_camera_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/open_camera_image_view"
+                android:layout_width="@dimen/bottom_sheet_icon_size"
+                android:layout_height="@dimen/bottom_sheet_icon_size"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_baseline_photo_camera_24"/>
+
+            <TextView
+                android:id="@+id/file_picker_option_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/bottom_sheet_icon_label" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/open_gallery_linear_layout"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/open_gallery_image_view"
+                android:layout_width="@dimen/bottom_sheet_icon_size"
+                android:layout_height="@dimen/bottom_sheet_icon_size"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_baseline_image_24"/>
+
+            <TextView
+                android:id="@+id/file_picker_option_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/bottom_sheet_icon_label" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+

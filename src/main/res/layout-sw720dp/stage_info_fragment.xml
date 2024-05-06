@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nested_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:padding="@dimen/consent_container_body_padding">
+
+        <TextView
+            android:id="@+id/stage_title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/text_view_vertical_margin"
+            android:fontFamily="@font/poppins_semibold"
+            android:lineHeight="@dimen/stage_title"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/stage_title"
+            app:layout_constraintBottom_toTopOf="@+id/stage_description_text_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/stage_description_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/text_view_vertical_margin"
+            android:fontFamily="@font/poppins"
+            android:lineHeight="@dimen/stage_description_text_view"
+            android:textAllCaps="false"
+            android:textColor="@color/stage_description"
+            android:textSize="@dimen/stage_description_text_view"
+            app:layout_constraintBottom_toTopOf="@+id/stage_info_icon_relative_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stage_title_text_view" />
+
+        <LinearLayout
+            android:id="@+id/stage_info_icon_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_view_vertical_margin"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stage_description_text_view">
+
+
+            <LinearLayout
+                android:id="@+id/digilocker_certificate_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/certificate_title_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/text_view_vertical_margin"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:lineHeight="@dimen/stage_info_text_view"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/stage_info_text_view"
+                    app:layout_constraintBottom_toTopOf="@+id/certificate_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/stage_description_text_view" />
+
+                <TextView
+                    android:id="@+id/certificate_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/text_view_vertical_margin"
+                    android:fontFamily="@font/poppins"
+                    android:lineHeight="@dimen/stage_info_text_view"
+                    android:textAllCaps="false"
+                    android:textColor="@color/stage_description"
+                    android:textSize="@dimen/stage_info_text_view"
+                    app:layout_constraintBottom_toTopOf="@+id/issuer_title_text_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/certificate_title_text_view" />
+
+                <TextView
+                    android:id="@+id/issuer_title_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/text_view_vertical_margin"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:lineHeight="@dimen/stage_info_text_view"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/stage_info_text_view"
+                    app:layout_constraintBottom_toTopOf="@+id/issuer_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/certificate_title" />
+
+                <TextView
+                    android:id="@+id/issuer_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:lineHeight="@dimen/stage_info_text_view"
+                    android:textAllCaps="false"
+                    android:textColor="@color/stage_description"
+                    android:textSize="@dimen/stage_info_text_view"
+                    app:layout_constraintBottom_toTopOf="@+id/accept_and_continue_linear_layout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/issuer_title_text_view" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/consent_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginTop="40dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/accept_and_continue_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/submit_button_height"
+            android:layout_marginTop="@dimen/submit_button_linear_layout_margin_top"
+            android:background="@drawable/progress_button_round_corner"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:minWidth="48dp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/submit_button_padding_start"
+            android:paddingEnd="@dimen/submit_button_padding_end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stage_info_icon_relative_layout">
+
+            <ProgressBar
+                android:id="@+id/accept_progress_bar"
+                android:layout_width="@dimen/submit_button_progress_bar_size"
+                android:layout_height="@dimen/submit_button_progress_bar_size"
+                android:layout_marginEnd="@dimen/submit_button_progress_bar_margin_end"
+                android:layout_weight="1"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/accept_and_continue_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/submit_button_text_view" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
